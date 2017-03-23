@@ -1,0 +1,75 @@
+Due: March 27, 11:59pm
+ 
+1. (MyInteger.java class) Implement a public class named MyInteger. The class contains:
+- An int data field named value that stores the int value represented by this object.
+- A constructor that creates a MyInteger object for the specified int value.
+- A get method that returns the int value.
+- Methods isEven(), isOdd(), and isPrime() that return true if the value is even, odd, or prime, respectively.
+- Static methods isEven(int), isOdd(int), and isPrime(int) that return true if the specified value is even, odd, or prime, respectively.
+- Static methods isEven(MyInteger), isOdd(MyInteger), and isPrime(MyInteger) that return true if the specified value is even, odd, or prime, respectively.
+- Methods equals(int) and equals(MyInteger) that return true if the value in the object is equal to the specified value.
+- A static method parseInt(String) that converts a string to an int value. Implement the method without using Integer.parseInt(x).
+ 
+Write a test program TestMyInteger.java where you test all the methods.
+ 
+2. (The MyPoint.java class) Implement a public class named MyPoint to represent a point with x and y coordinates. The class contains:
+- Two data fields x and y that represent the coordinates.
+- A no-arg constructor that creates a point (0, 0).
+- A constructor that constructs a point with specified coordinates.
+- Two get methods for data fields x and y, respectively.
+- A method named distance that returns the distance from this point to another point of the MyPoint type.
+- A method named distance that returns the distance from this point to another point with specified x and y-coordinates.
+ 
+Write a test program TestMyPoint.java that creates two points (0, 0) and (10, 30.5) and displays the distance between them.
+ 
+3. (Math: The Complex.java class) A complex number is a number in the form a + bi, where a and b are real numbers and i is sqrt(-1). The numbers a and b are known as the real part and imaginary part of the complex number, respectively. You can perform addition, subtraction, multiplication, and division for complex numbers using the following formulas:
+               a + bi + c + di = (a + c) + (b + d)i
+               a + bi - (c + di) = (a - c) + (b - d)i
+               (a + bi)*(c + di) = (ac - bd) + (bc + ad)i
+               (a + bi)/(c + di) = (ac + bd)/(c^2 + d^2) + (bc - ad)i/(c^2 + d^2)
+Implement a public class named Complex for representing complex numbers and the methods add, subtract, multiply, and divide for performing complex number operations, and override toString method for returning a string representation for a complex number. The toString method returns "(a + bi)" as a string. If b is 0, it simply returns a. Provide three constructors Complex(a, b), Complex(a), and Complex(). Complex() creates a Complex object for number 0 and Complex(a) creates a Complex object with 0 for b. Also provide the getRealPart() and getImaginaryPart() methods for returning the real and imaginary part of the complex number, respectively.
+ 
+Write a test program TestComplex.java that prompts the user to enter two complex numbers and  displays the result of their addition, subtraction, multiplication, and division.
+ 
+4. (The Time.java class) Implement a public class named Time. The class contains:
+- Data fields int hour, minute, and second that represents a time.
+- A no-arg constructor that creates a Time object for the current local time.
+- A constructor that constructs a Time object with a specified elapse time since midnight, January 1, 1970 in milliseconds. (The data fields value will represent this time.)
+- A constructor that creates a Time object with the specified hour, minute and second.
+- Three get methods for the data fields hour, minute, and second, respectively.
+- A method named setTime(long elapseTime) that sets a new time for the object using the elapsed time.
+ 
+Write a test program TestTime.java that creates two Time objects (using new Time() and new Time(555550000)) and display their hour, minute, and second.
+Note 1: The pseudocode to initialize times with the current time is:
+public Time(){
+  Calendar cal = Calendar.getInstance();
+  hour = cal.get(Calendar.HOUR_OF_DAY);
+  minute = cal.get(Calendar.MINUTE);
+  second = cal.get(Calendar.SECOND);
+}
+Note 2: The pseudocode to compute times from the elapsed time in milliseconds in the second constructor is:
+totalSeconds is the elapseTime / 1000
+time_seconds is the reminder after you divide totalSeconds to 60
+totalMinutes is the totalSeconds / 60
+time_minutes is the reminder after you divide totalMinutes to 60
+totalhours is the totalMinutes / 60
+time_hour is the reminder after you divide totalhours to 24
+The setTime method does exactly the same thing as the constructor above. It is a modifier method – it changes the data fields of an object that was already created.
+ 
+5. (The Account.java class) Design a public class named Account that contains:
+- A private int data field named id for the account (default 0).
+- A private double data field named balance for the account (default 1000).
+- A private double data field named annualInterestRate that stores the current interest rate (default 4.50).
+- A private java.util.Date data field named dateCreated that stores the date when the account was created.
+- A no-arg constructor that creates a default account.
+- A constructor that creates an account with a specified id and initial balance.
+- The accessor and mutator methods for id, balance, and annualInterestRate.
+- The accessor method for dateCreated.
+- A method named getMonthlyInterestRate() that returns the monthly interest rate (annualInterestRate/12).
+- A method named withDraw(double amount) that withdraws a specified amount from the account. If there are not enough funds to withdraw an amount of money, print a statement saying that there are not enough money and leave the same balance in the account.
+- A method named deposit that deposits a specified amount to the account.
+ 
+Total: 25 points (5 points each problem).
+ 
+MyProgrammingLab chapters: 9 (Objects and Classes) and 11 (Inheritance and Polymorphism).
+5 points each chapter. Graded separately.

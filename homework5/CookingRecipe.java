@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class CookingRecipe{
 	
 	private String name;
@@ -6,6 +7,11 @@ public class CookingRecipe{
 	
 	public CookingRecipe(String name){
 		this.name = name;
+	}
+	
+	public CookingRecipe(String name, RecipeIngredient[] ingredients){
+		this.name = name;
+		this.list = new ArrayList<RecipeIngredient>(Arrays.asList(ingredients));
 	}
 	
 	public String getName(){

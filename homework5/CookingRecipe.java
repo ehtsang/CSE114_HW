@@ -109,9 +109,17 @@ public class CookingRecipe{
 	}
 	
 	public boolean equals(CookingRecipe second){
-		for (RecipeIngredient i : list){
-			if (second.getList().indexOf(i) == -1){
-				return false;
+		if (list.size() > second.getList().size()){
+			for (RecipeIngredient i : list){
+				if (second.getList().indexOf(i) == -1){
+					return false;
+				}
+			}
+		} else {
+			for (RecipeIngredient i : second.getList()){
+				if (list.indexOf(i) == -1){
+					return false;
+				}
 			}
 		}
 		//return (this.getList().equals(second.getList()) && (this.getName().equals(second.getName())));

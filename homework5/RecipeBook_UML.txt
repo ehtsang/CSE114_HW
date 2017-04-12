@@ -1,0 +1,68 @@
+CookingRecipe.java
+-->Methods:
+----|public CookingRecipe(String name)
+----|public CookingRecipe(String name, RecipeIngredient[] ingredients)
+----|public String getName()
+----|public ArrayList<RecipeIngredient> getList()
+----|public boolean check(Ingredient second, ArrayList<RecipeIngredient> lis)
+----|public static int cIndexOf(Ingredient second, ArrayList<RecipeIngredient> lis)
+----|public void addOrUpdateRecipeIngredient(Ingredient ingredient, float quantity)
+----|public RecipeIngredient getRecipeIngredient(Ingredient ingredient)
+----|public RecipeIngredient getRecipeIngredient(String ingredientName)
+----|public RecipeIngredient removeRecipeIngredient(Ingredient ingredient)
+----|public RecipeIngredient removeRecipeIngredient(String ingredientName)
+----|public float calculateCalories()
+----|public int getNumberOfIngredients()
+----|public String toString()
+----|public boolean equals(CookingRecipe second)
+-->Variables:
+----|String name
+----|ArrayList<RecipeIngredient> list
+
+Ingredient.java
+-->Methods:
+----|public Ingredient(String name, String measuringUnit, int caloriesPerUnit)
+----|public String toString()
+----|public String getName()
+----|public String getMeasuringUnit()
+----|public int getCaloriesPerUnit()
+----|public void setName(String name)
+----|public void setMeasuringUnit(String measuringUnit)
+----|public void setCaloriesPerUnit(int caloriesPerUnit)
+----|public boolean equals(Ingredient second)
+-->Variables:
+----|String name
+----|String measuringUnit
+----|int caloriesPerUnit
+
+RecipeBook.java
+-->Methods:
+----|public RecipeBook(String bookName)
+----|public String getBookName()
+----|public ArrayList<CookingRecipe> getList()
+----|public CookingRecipe addRecipe(String name, RecipeIngredient[] ingredients)
+----|public CookingRecipe removeRecipe(String name)
+----|public CookingRecipe[] findRecipes(RecipeIngredient[] ingredients)
+----|public CookingRecipe[] findRecipesWithFewIngredients(int numberOfIngredients)
+----|public CookingRecipe[] findRecipesLowCalories()
+----|public String toString()
+----|public boolean equals(RecipeBook second)
+-->Variables:
+----|String bookName
+
+RecipeIngredient.java
+-->Methods:
+----|public RecipeIngredient(String name, String measuringUnit, int caloriesPerUnit, float quantity)
+----|public RecipeIngredient(Ingredient ingredient, float quantity)
+----|public float getQuantity()
+----|public void setQuantity(float quantity)
+----|public String toString()
+----|public boolean equals(RecipeIngredient second)
+-->Variables:
+----|float quantity
+----|ArrayList<CookingRecipe> list
+
+TestRecipeBook.java
+-->Methods:
+----|public static void main(String[] args)
+-->Variables:

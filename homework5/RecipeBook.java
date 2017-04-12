@@ -9,6 +9,14 @@ public class RecipeBook{
 		this.bookName = bookName;
 	}
 	
+	public String getBookName(){
+		return this.bookName;
+	}
+	
+	public ArrayList<CookingRecipe> getList(){
+		return this.list;
+	}
+	
 	public CookingRecipe addRecipe(String name, RecipeIngredient[] ingredients){
 		for (CookingRecipe i : list){
 			if (i.getName().equals(name)){
@@ -74,5 +82,30 @@ public class RecipeBook{
 		}
 	}
 	
-	//Still requires toString and equals overloaded methods
+	
+	public String toString(){
+		String output = "RecipeBook\n" + "bookName=" + this.bookName + "\n";
+		for (CookingRecipe i : list){
+			output += i.toString();
+		}
+		return output;
+	}
+	
+	public boolean equals(RecipeBook second){
+		if (list.size() > second.getList().size()){
+			for (CookingRecipe i : list){
+				if (second.getList().indexOf(i) == -1){
+					return false;
+				}
+			}
+		} else {
+			for (CookingRecipe i : second.getList()){
+				if (list.indexOf(i) == -1){
+					return false;
+				}
+			}
+		}
+		return (this.getBookName().equals(second.getBookName()));
+	}
+	
 }

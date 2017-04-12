@@ -32,7 +32,7 @@ public class CookingRecipe{
 		return output;
 	}
 	
-	public int cIndexOf(Ingredient second, ArrayList<RecipeIngredient> lis){
+	public static int cIndexOf(Ingredient second, ArrayList<RecipeIngredient> lis){
 		int output = -1;
 		for (int i = 0; i < lis.size(); i++){
 			if (lis.get(i).getName().equals(second.getName()) && lis.get(i).getMeasuringUnit().equals(second.getMeasuringUnit()) && (lis.get(i).getCaloriesPerUnit() == second.getCaloriesPerUnit())){
@@ -46,7 +46,7 @@ public class CookingRecipe{
 	public void addOrUpdateRecipeIngredient(Ingredient ingredient, float quantity){
 		RecipeIngredient mInput = new RecipeIngredient(ingredient, quantity);
 		if (check(ingredient, list)) {
-			list.set(list.indexOf(ingredient), mInput);
+			list.set(cIndexOf(ingredient, list), mInput);
 		} else {
 			list.add(mInput);
 		}
@@ -56,7 +56,7 @@ public class CookingRecipe{
 		if (!(check(ingredient, list))){
 			return null;
 		} else {
-			return list.get(list.indexOf(ingredient));
+			return list.get(cIndexOf(ingredient, list));
 		}
 	}
 	

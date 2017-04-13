@@ -1,3 +1,8 @@
+// Edward Tsang
+// 111335103
+// CSE 114
+// Homework #5
+
 import java.util.ArrayList;
 import java.util.Arrays;
 public class CookingRecipe{

@@ -1,3 +1,8 @@
+// Edward Tsang
+// 111335103
+// CSE 114
+// Homework #5
+
 public class RecipeIngredient extends Ingredient{
 	
 	private float quantity;

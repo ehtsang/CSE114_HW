@@ -1,3 +1,8 @@
+// Edward Tsang
+// 111335103
+// CSE 114
+// Homework #5
+
 public class Ingredient{
 	
 	private String name;

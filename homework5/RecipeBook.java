@@ -66,12 +66,18 @@ public class RecipeBook{
 		}
 	}
 	
+	//THIS METHOD IS INCORRECT IT WILL LIST ALL THE RECIPES BECAUSE IT ONLY HAS ONE LOOP. SPLIT INTO TWO LOOPS. ONE TO FIND THE MIN, ONE TO FIND ALL RECIPES WITH THE MIN.
+	//Above statement is for changelog purposes only, method has since been updated to reflect proper behavior.
 	public CookingRecipe[] findRecipesLowCalories(){
 		float current = list.get(0).calculateCalories();
 		ArrayList<CookingRecipe> output = new ArrayList<CookingRecipe>();
 		for (CookingRecipe i : list){
 			if (i.calculateCalories() <= current){
 				current = i.calculateCalories();
+			}
+		}
+		for (CookingRecipe i : list){
+			if (i.calculateCalories() == current){
 				output.add(i);
 			}
 		}

@@ -49,6 +49,7 @@ RecipeBook.java
 ----|public boolean equals(RecipeBook second)
 -->Variables:
 ----|String bookName
+----|ArrayList<CookingRecipe> list
 
 RecipeIngredient.java
 -->Methods:
@@ -60,7 +61,6 @@ RecipeIngredient.java
 ----|public boolean equals(RecipeIngredient second)
 -->Variables:
 ----|float quantity
-----|ArrayList<CookingRecipe> list
 
 TestRecipeBook.java
 -->Methods:
